@@ -9,8 +9,22 @@
 
 <h2>Lists (<%= @lists.count %>)</h2>
 
-<% unless @lists.empty? %>
+
+  <div class="container">
+  <% unless @lists.empty? %>
+    <div class="row">
     <% @lists.each do |list| %>
-        <%= link_to list.name, list_path(list) %>
+      <div class="col-12 col-sm-6 col-md-4 mt-3">
+        <div class="card" style="w-100">
+          <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <%= link_to list.name, list_path(list) %>
+          </div>
+        </div>
+      </div>
     <% end %>
+    </div>
+  </div>
 <% end %>
