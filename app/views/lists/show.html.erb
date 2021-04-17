@@ -3,6 +3,9 @@
     <h1><%= @list.name %></h1>
     <p><%= @list.comment %></p>
 
+    <% @movies.each do |movie| %>
+        <h2><%= movie.title %></h2>
+    <% end %>
     <div class="text-right">
         <%= link_to 'Add Movie', new_list_bookmark_path(@list), class: "btn btn-color mt-2" %>
     </div>
