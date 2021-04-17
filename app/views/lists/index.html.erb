@@ -1,4 +1,11 @@
-
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path("hero.png")%>);">
+  <div class="container text-center">
+    <h1>Wacthlist</h1>
+    <p>Enjoy some of my favorite entertainment!</p>
+    <a class="btn btn-color mt-2" href="#">Add Movie</a>
+    <a class="btn btn-color-ghost mt-2" href="#">Create List</a>
+  </div>
+</div>
 
 <% unless @lists.empty? %>
     <% @lists.each do |list| %>
