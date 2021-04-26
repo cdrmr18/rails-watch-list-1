@@ -17,4 +17,4 @@ file4 = URI.open("https://image.tmdb.org/t/p/original/MvYpKlpFukTivnlBhizGbkAe3v
 ocean = Movie.create(title: "Ocean's Eight", overview: "Debbie Ocean, a criminal mastermind, gathers a crew of female thieves to pull off the heist of the century.", rating: 7.0)
 ocean.photo.attach(io: file4, filename: 'nes4.png', content_type: 'image/png')
 
-puts "#{Movie.count}movies created"
+puts "#{Movie.count} movies created"
