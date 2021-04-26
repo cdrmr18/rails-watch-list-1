@@ -3,23 +3,27 @@
     <div class="container">
         <h1><%= @list.name %></h1>
         <p><%= @list.comment %></p>
-        <%= link_to 'Add Movie', anchor: "add-movie" %>
     </div>
 </div>
 
+<div class="text-right p-3">
+    <%= link_to 'Add Movie', anchor: "add-movie"%>
+</div>
 
 <div class="container">
-    <% @movies.each do |movie| %>
-        <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="..." alt="Card image cap">
-            <div class="card-body">
-                <h5 class="<%= movie.title %>">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-                <%= link_to 'Delete', bookmark_path(movie), method: :delete %>
+    <% unless @movies.empty? %>
+    <div class="row">
+    <% @movies.each  do |movie| %>
+        <div class="col-12 col-sm-6 col-md-4 mt-4">
+            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path movie.photo.key, crop: :fill %>')">
+                <%= link_to 'Delete', path, method: :delete %>
             </div>
         </div>
     <% end %>
+    </div>
+</div>
+    <% end %>
+
 
 
    <div class="container mt-4" id="add-movie">
