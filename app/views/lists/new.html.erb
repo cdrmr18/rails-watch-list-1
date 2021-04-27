@@ -1,6 +1,9 @@
-<%= simple_form_for @list do |f| %>
-  <%= f.input :name %>
-  <%= f.input :comment %>
-  <%= f.input :photo, as: :file %>
-  <%= f.button :submit %>
+<div class="container mt-4">
+  <h1 class='mb-4 pt-4'>Create your new list</h1>
+  <%= simple_form_for @list do |f| %>
+  <%= f.input :name, label: 'Movie name' %>
+  <%= f.input :comment, label: 'Why this list is special'  %>
+  <%= f.input :photo, as: :file, label: 'Add a cover photo'  %>
+  <%= f.button :submit, class: "btn btn-secondary" %>
 <% end %>
+</div>
